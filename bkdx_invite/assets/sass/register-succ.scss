@@ -1,0 +1,60 @@
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.page-container{
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 0.8rem;
+    .succ-icon{
+      img{
+        width: 2.20rem;
+        height: 2.20rem;
+      }
+    }
+    .title{
+      font-size:0.40rem;
+      font-family:PingFangSC;
+      font-weight:600;
+      color:rgba(34,34,34,1);
+      line-height:0.40rem;
+      margin-top: 0.6rem;
+      margin-bottom: 0.4rem;
+    }
+    .tips{
+      font-size:0.28rem;
+      font-family:PingFangSC;
+      font-weight:400;
+      color:rgba(102,102,102,1);
+      line-height:0.28rem;
+    }
+    .download-btn{
+      display: inline-block;
+      width:4rem;
+      height:0.90rem;
+      line-height:0.90rem;
+      text-align: center;
+      font-weight:600;
+      font-size:0.32rem;
+      background:rgba(104,169,253,1);
+      color:rgba(255,255,255,1);
+      border-radius:1rem;
+      margin-top: 2.28rem;
+    }
+    .bottom-tips{
+      position: absolute;
+      left: 0;
+      bottom: 0.5rem;
+      width: 100%;
+      text-align: left;
+      padding: 0 1.25rem;
+      font-size:0.28rem;
+      font-family:PingFangSC;
+      font-weight:400;
+      color:rgba(68,68,68,1);
+      line-height:0.40rem;
+    }
+}

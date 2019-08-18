@@ -1,0 +1,237 @@
+body{
+    background-color: #EC3848;
+}
+
+.page-container{
+    width: 100%;
+    padding-bottom: 1.17rem;
+    .top-bg{
+        img{
+            width: 100%;
+        }
+    }
+    .invite-info{
+        position: relative;
+        margin-top: -0.55rem;
+        width: 7.5rem;
+        height: 2.8rem;
+        background-image: url(../img/h5_card@2x.png);
+        background-size: 7.5rem 2.8rem;
+        .info-content{
+            padding: 0.63rem 1.04rem 0 1.19rem;
+            display: flex;
+            justify-content: space-between;
+            .item{
+                text-align: center;
+                h2{
+                    font-size:0.7rem;
+                    font-family:PingFangSC;
+                    font-weight:600;
+                    color:rgba(255,183,87,1);
+                    line-height:0.7rem;
+                    margin-bottom: 0.1rem;
+                }
+                .unit{
+                    font-size: 0.3rem;
+                    font-weight: normal;
+                }
+                .title{
+                    font-size:0.28rem;
+                    font-family:PingFangSC;
+                    font-weight:400;
+                    color:rgba(255,255,255,1);
+                    line-height:0.28rem;
+                }
+            }
+        }
+    }
+    .invite-btn{
+        text-align: center;
+        img{
+            width: 6rem;
+            height: 1rem;
+            cursor: pointer;
+        }
+    }   
+    .invite-list-title{
+        text-align: center;
+        margin-top: 0.6rem;
+        margin-bottom: 0.4rem;
+        img{
+            width: 4rem;
+            height: 0.4rem;
+        }
+    }
+    .invite-list-wrap{
+        width: 6.70rem;
+        margin: 0 auto;
+        position: relative;
+        .top{
+            width: 6.70rem;
+            height: 0.42rem;
+            background:rgba(248,38,60,1);
+            box-shadow:0px 2px 2px 0px rgba(255,84,102,1),0px -1px 0px 0px rgba(255,81,100,1);
+            border-radius: 0.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner{
+                display: block;
+                width: 6.50rem;
+                height: 0.22rem;
+                background:rgba(205,46,62,1);
+                border-radius:1rem;
+            }
+        }
+        .shadow-box{
+          position: absolute;
+          left: 50%;
+          top: 0.21rem;
+          transform: translateX(-50%);
+          width:6.30rem;
+          height:0.21rem;
+          background:linear-gradient(180deg,rgba(205,46,62,1) 0%,rgba(205,46,62,0) 100%);
+        }
+        .invite-list-box{
+            margin: -0.16rem auto 0;
+            width:6.30rem;
+            height:8.38rem;
+            background:linear-gradient(180deg,rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%);
+            border-radius:0px 0px 0.10rem 0.10rem;
+            padding-top: 0.21rem;
+            overflow-y: auto;
+            .list-content{
+                padding: 0.25rem 0.45rem;
+                > .title{
+                    font-size:0.32rem;
+                    font-family:PingFangSC;
+                    font-weight:600;
+                    color:rgba(245,41,59,1);
+                    margin-bottom: 0.4rem;
+                }
+                > li{
+                    margin-bottom: 0.3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    text-align: center;
+                    font-size:0.30rem;
+                    font-family:PingFangSC;
+                    font-weight:600;
+                    color:rgba(102,102,102,1);
+                    line-height:0.30rem;
+                    .rank{
+                        width: 0.64rem;
+                        margin-left: 0.13rem;
+                        .number{
+                          display: inline-block;
+                          width: 0.4rem;
+                          height: 0.4rem;
+                          line-height: 0.4rem;
+                          background-color: #aba6a6;
+                          color: #fff;
+                          font-size: 0.22rem;
+                          font-family:PingFangSC;
+                          border-radius: 100%;
+                          text-align: center;
+                          font-weight: normal;
+                        }
+                    }
+                    .nickName{
+                        flex: 1;
+                    }
+                    .num{
+                        width: 1.28rem;
+                    }
+                    .icon{
+                        display: inline-block;
+                        width: 0.4rem;
+                        height: 0.4rem;
+                        background-size: 0.4rem 0.4rem;
+                        &.first{
+                          background-image: url('../img/first.png');
+                        }
+                        &.second{
+                          background-image: url('../img/second.png');
+                        }
+                        &.third{
+                          background-image: url('../img/third.png');
+                        }
+                    }
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4){
+                        .rank,
+                        .nickName,
+                        .num{
+                            color:#F5293B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.share-tips{
+  display:none;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.6);
+  img{
+    position: absolute;
+    right: 0.45rem;
+    top: 0.33rem;
+    width: 3.06rem;
+    height: 2rem;
+  }
+}
+
+.activity-rules{
+  display:none;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.6);
+  .inner-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width:6.20rem;
+    height:6.99rem;
+    background:rgba(255,255,255,1);
+    border-radius:0.20rem 0.20rem 0px 0.20rem;
+    padding: 0.6rem 0.4rem;
+    .title{
+      font-size:0.38rem;
+      font-family:PingFangSC;
+      font-weight:600;
+      color:rgba(4,16,38,1);
+      line-height:0.38rem;
+      margin-bottom: 0.35rem;
+    }
+    .content{
+      font-size:0.26rem;
+      font-family:PingFangSC;
+      font-weight:500;
+      color:rgba(81,88,101,1);
+      line-height:0.50rem;
+    }
+    .close-btn{
+      position: absolute;
+      bottom: -0.91rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.5rem;
+      height: 0.5rem;
+      background-image: url('../img/h5_close@2x.png');
+      background-size: 0.5rem 0.5rem;
+    }
+  }
+}
