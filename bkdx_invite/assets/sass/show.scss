@@ -6,8 +6,19 @@ body{
     width: 100%;
     padding-bottom: 1.17rem;
     .top-bg{
+        position: relative;
         img{
             width: 100%;
+        }
+        .look-rule{
+            position: absolute;
+            right: 0;
+            top: 0.3rem;
+            width: 1.14rem;
+            height: 0.46rem;
+            img{
+                width: 100%;
+            }
         }
     }
     .invite-info{
@@ -24,9 +35,9 @@ body{
             .item{
                 text-align: center;
                 h2{
-                    font-size:0.7rem;
+                    font-size:0.6rem;
                     font-family:PingFangSC;
-                    font-weight:600;
+                    font-weight:500;
                     color:rgba(255,183,87,1);
                     line-height:0.7rem;
                     margin-bottom: 0.1rem;
@@ -35,12 +46,15 @@ body{
                     font-size: 0.3rem;
                     font-weight: normal;
                 }
+                .prize{
+                    font-size: 0.3rem;
+                }
                 .title{
-                    font-size:0.28rem;
-                    font-family:PingFangSC;
-                    font-weight:400;
-                    color:rgba(255,255,255,1);
-                    line-height:0.28rem;
+                  font-size:0.28rem;
+                  font-family:PingFangSC;
+                  font-weight:400;
+                  color:rgba(255,255,255,1);
+                  line-height:0.28rem;
                 }
             }
         }
@@ -48,26 +62,76 @@ body{
     .invite-btn{
         text-align: center;
         img{
-            width: 6rem;
-            height: 1rem;
-            cursor: pointer;
+          width: 6rem;
+          height: 1rem;
+          cursor: pointer;
         }
+    }
+    .prize-list-wrap{
+      width:7.10rem;
+      height:3.37rem;
+      border: 0.10rem solid #FFAC3F;
+      border-radius: 0.1rem;
+      margin: 0.60rem auto 0;
+      background-color: #FAF4F4;
+      box-sizing: border-box;
+      .prize-list-box{
+        padding: 0.30rem 0;
+        display: flex;
+        justify-content: space-around;
+        li{
+          text-align: center;
+          width: 1.65rem;
+          h3{
+            font-size:0.26rem;
+            font-family:PingFangSC;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            line-height:0.28rem;
+            span{
+              color: #EC3848;
+            }
+          }
+          img{
+            width: 1.40rem;
+            height: 1.40rem;
+            margin-top: 0.14rem;
+            margin-bottom: 0.2rem;
+          }
+          .prize-name{
+            font-size:0.24rem;
+            font-family:PingFangSC;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+            line-height:0.28rem;
+          }
+        }
+      }
     }   
     .invite-list-title{
         text-align: center;
         margin-top: 0.6rem;
         margin-bottom: 0.4rem;
         img{
-            width: 4rem;
-            height: 0.4rem;
+          width: 4rem;
+          height: 0.4rem;
+        }
+        p{
+          margin-top: 0.2rem;
+          font-size:0.24rem;
+          font-family:PingFangSC;
+          font-weight:400;
+          color:rgba(255,255,255,1);
+          line-height:0.24rem;
+          text-align: center;
         }
     }
     .invite-list-wrap{
-        width: 6.70rem;
+        width: 6.90rem;
         margin: 0 auto;
         position: relative;
         .top{
-            width: 6.70rem;
+            width: 6.90rem;
             height: 0.42rem;
             background:rgba(248,38,60,1);
             box-shadow:0px 2px 2px 0px rgba(255,84,102,1),0px -1px 0px 0px rgba(255,81,100,1);
@@ -77,7 +141,7 @@ body{
             align-items: center;
             .inner{
                 display: block;
-                width: 6.50rem;
+                width: 6.70rem;
                 height: 0.22rem;
                 background:rgba(205,46,62,1);
                 border-radius:1rem;
@@ -88,13 +152,13 @@ body{
           left: 50%;
           top: 0.21rem;
           transform: translateX(-50%);
-          width:6.30rem;
+          width:6.50rem;
           height:0.21rem;
           background:linear-gradient(180deg,rgba(205,46,62,1) 0%,rgba(205,46,62,0) 100%);
         }
         .invite-list-box{
             margin: -0.16rem auto 0;
-            width:6.30rem;
+            width:6.50rem;
             height:8.38rem;
             background:linear-gradient(180deg,rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%);
             border-radius:0px 0px 0.10rem 0.10rem;
@@ -119,9 +183,9 @@ body{
                     font-family:PingFangSC;
                     font-weight:600;
                     color:rgba(102,102,102,1);
-                    line-height:0.30rem;
+                    // line-height:0.30rem;
                     .rank{
-                        width: 0.64rem;
+                        width: 0.74rem;
                         margin-left: 0.13rem;
                         .number{
                           display: inline-block;
@@ -139,15 +203,20 @@ body{
                     }
                     .nickName{
                         flex: 1;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        padding: 0.05rem;
                     }
                     .num{
-                        width: 1.28rem;
+                        width: 1.58rem;
                     }
                     .icon{
                         display: inline-block;
                         width: 0.4rem;
                         height: 0.4rem;
                         background-size: 0.4rem 0.4rem;
+                        background-repeat: no-repeat;
                         &.first{
                           background-image: url('../img/first.png');
                         }
@@ -158,15 +227,18 @@ body{
                           background-image: url('../img/third.png');
                         }
                     }
-                    &:nth-child(2),
-                    &:nth-child(3),
-                    &:nth-child(4){
+                    &.fontRed{
                         .rank,
                         .nickName,
                         .num{
                             color:#F5293B;
                         }
                     }
+                }
+                .noDataTips{
+                  text-align: center;
+                  padding: 0.10rem;
+                  font-size: 0.26rem;
                 }
             }
         }
@@ -201,13 +273,13 @@ body{
   .inner-box{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 46%;
     transform: translate(-50%,-50%);
     width:6.20rem;
-    height:6.99rem;
+    height:10.67rem;
     background:rgba(255,255,255,1);
-    border-radius:0.20rem 0.20rem 0px 0.20rem;
-    padding: 0.6rem 0.4rem;
+    border-radius:0.20rem 0.20rem 0.2rem 0.20rem;
+    padding: 0.6rem 0.28rem 0.4rem 0.3rem;
     .title{
       font-size:0.38rem;
       font-family:PingFangSC;
@@ -216,16 +288,25 @@ body{
       line-height:0.38rem;
       margin-bottom: 0.35rem;
     }
-    .content{
-      font-size:0.26rem;
-      font-family:PingFangSC;
-      font-weight:500;
-      color:rgba(81,88,101,1);
-      line-height:0.50rem;
+    .content-wrap{
+      height: 8.88rem;
+      overflow-y: auto;
+      .content{
+        // height: 8rem;
+        overflow-y: auto;
+        font-size:0.26rem;
+        font-family:PingFangSC;
+        font-weight:500;
+        color:rgba(81,88,101,1);
+        line-height:0.50rem;
+        .font_style{
+          color: #F62F43;
+        }
+      }
     }
     .close-btn{
       position: absolute;
-      bottom: -0.91rem;
+      bottom: -0.71rem;
       left: 50%;
       transform: translateX(-50%);
       width: 0.5rem;

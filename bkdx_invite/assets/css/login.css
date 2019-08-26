@@ -1,69 +1,86 @@
 body {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .page-container {
   width: 100%;
-  padding-bottom: 1.17rem; }
-  .page-container .top-bg img {
-    width: 100%; }
-  .page-container .main-box {
-    background: white;
-    margin-top: 0.3rem; }
-    .page-container .main-box .form-wrap .form-item {
-      margin: 0 0.6rem;
-      height: 1.12rem;
-      border-bottom: 0.01rem solid #DCE1E8;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      .page-container .main-box .form-wrap .form-item input {
-        font-size: 0.32rem;
-        font-family: PingFangSC;
-        color: #333;
-        border: none; }
-    .page-container .main-box .oprate-box {
-      margin-top: 0.9rem;
-      text-align: center; }
-      .page-container .main-box .oprate-box button {
-        width: 6.30rem;
-        height: 0.98rem;
-        line-height: 0.98rem;
-        border-radius: 1rem;
-        font-size: 0.36rem;
-        font-family: PingFangSC;
-        font-weight: Semibold;
-        color: white;
-        text-align: center; }
-        .page-container .main-box .oprate-box button.login-btn {
-          background-color: #68A9FD;
-          margin-bottom: 0.3rem; }
-        .page-container .main-box .oprate-box button.register-btn {
-          background-color: #FF742F; }
-    .page-container .main-box .loginbythird {
-      margin-top: 1.1rem; }
-      .page-container .main-box .loginbythird .tips {
-        text-align: center;
-        font-size: 0.24rem;
-        font-family: PingFangSC;
-        font-weight: 400;
-        color: #626262;
-        line-height: 0.24rem; }
-      .page-container .main-box .loginbythird .login-ways {
-        margin-top: 0.5rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; }
-        .page-container .main-box .loginbythird .login-ways li img {
-          width: 0.7rem;
-          height: 0.7rem; }
-        .page-container .main-box .loginbythird .login-ways li:nth-child(1), .page-container .main-box .loginbythird .login-ways li:nth-child(2) {
-          margin-right: 1rem; }
+  padding-bottom: 1.17rem;
+}
+.page-container .top-bg img {
+  width: 100%;
+}
+.page-container .main-box {
+  background: white;
+  margin-top: 0.3rem;
+}
+.page-container .main-box .form-wrap .form-item {
+  margin: 0 0.6rem;
+  height: 1.12rem;
+  border-bottom: 0.01rem solid #DCE1E8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-container .main-box .form-wrap .form-item input {
+  font-size: 0.32rem;
+  font-family: PingFangSC;
+  color: #333;
+  border: none;
+  width: 100%;
+  height: 0.6rem;
+}
+.page-container .main-box .oprate-box {
+  margin-top: 0.9rem;
+  text-align: center;
+}
+.page-container .main-box .oprate-box button {
+  width: 6.30rem;
+  height: 0.98rem;
+  line-height: 0.98rem;
+  border-radius: 1rem;
+  font-size: 0.36rem;
+  font-family: PingFangSC;
+  font-weight: Semibold;
+  color: white;
+  text-align: center;
+}
+.page-container .main-box .oprate-box button.login-btn {
+  background-color: #68A9FD;
+  margin-bottom: 0.3rem;
+}
+.page-container .main-box .oprate-box button.register-btn {
+  background-color: #FF742F;
+}
+.page-container .main-box .loginbythird {
+  margin-top: 1.1rem;
+}
+.page-container .main-box .loginbythird .tips {
+  text-align: center;
+  font-size: 0.24rem;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #626262;
+  line-height: 0.24rem;
+}
+.page-container .main-box .loginbythird .login-ways {
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.page-container .main-box .loginbythird .login-ways li img {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.page-container .main-box .loginbythird .login-ways li:nth-child(1), .page-container .main-box .loginbythird .login-ways li:nth-child(2) {
+  margin-right: 1rem;
+}

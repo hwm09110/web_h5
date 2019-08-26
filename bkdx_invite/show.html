@@ -4,33 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>开心邀请注册有礼</title>
+    <title>开学邀请注册有礼</title>
     <script src="./assets/js/flexible.js"></script>
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/show.css">
+    <link rel="stylesheet" href="./assets/css/show.css?t=201904512487">
 </head>
 <body>
     <div class="page-container">
         <div class="top-bg">
-            <img src="./assets/img/h5_bg@2x(1).png" alt="bg">
+            <img src="./assets/img/bg1.png" alt="bg">
+            <span class="look-rule"><img src="./assets/img/rule-btn.png" alt="image"></span>
         </div>
         <div class="invite-info">
             <div class="info-content">
                 <div class="item">
-                    <h2>1<span class="unit">人</span></h2>
+                    <h2><span class="invite-count">0</span><span class="unit">人</span></h2>
                     <p class="title">成功邀请</p>
                 </div>
                 <div class="item">
-                    <h2>10000<span class="unit">分</span></h2>
-                    <p class="title">累计积分</p>
+                    <h2 class="prize">待开奖</h2>
+                    <p class="title">获得奖励</p>
                 </div>
             </div>
         </div>
         <div class="invite-btn">
             <img src="./assets/img/h5_button1@2x(1).png" alt="image">
         </div>
+        <div class="prize-list-wrap">
+            <ul class="prize-list-box">
+                <li>
+                    <h3>邀请<span>3</span>人</h3>
+                    <img src="./assets/img/h5_prize1@2x.png" alt="prize">
+                    <div class="prize-name">1000<br/>积分</div>
+                </li>
+                <li>
+                    <h3>邀请<span>10</span>人</h3>
+                    <img src="./assets/img/h5_prize2@2x.png" alt="prize">
+                    <div class="prize-name">20元手机<br/>话费</div>
+                </li>
+                <li>
+                    <h3>邀请<span>30</span>人</h3>
+                    <img src="./assets/img/h5_prize3@2x.png" alt="prize">
+                    <div class="prize-name">教师节保温杯礼盒(限量20份)</div>
+                </li>
+                <li>
+                    <h3>邀请<span>50</span>人</h3>
+                    <img src="./assets/img/h5_prize4@2x.png" alt="prize">
+                    <div class="prize-name">宏途中秋月饼礼盒(限量10份)</div>
+                </li>
+            </ul>
+        </div>
         <div class="invite-list-title">
             <img src="./assets/img/h5_text@2x(1).png" alt="image">
+            <p>（仅显示前30名）</p>
         </div>
         <div class="invite-list-wrap">
             <div class="top">
@@ -44,7 +70,8 @@
                         <div class="nickName">用户</div>
                         <div class="num">邀请人数</div>
                     </li>
-                    <li>
+                    <li class="noDataTips">暂无数据</li>
+                    <!-- <li>
                         <div class="rank"><span class="icon first"></span></div>
                         <div class="nickName">静静的看</div>
                         <div class="num">1000</div>
@@ -63,62 +90,7 @@
                         <div class="rank"><span class="number">4</span></div>
                         <div class="nickName">努力加油</div>
                         <div class="num">580</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">5</span></div>
-                        <div class="nickName">哈哈哈66</div>
-                        <div class="num">520</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">6</span></div>
-                        <div class="nickName">Liamsphoto</div>
-                        <div class="num">420</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">7</span></div>
-                        <div class="nickName">努力加油</div>
-                        <div class="num">223</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">8</span></div>
-                        <div class="nickName">小小衫</div>
-                        <div class="num">100</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">9</span></div>
-                        <div class="nickName">不服来战</div>
-                        <div class="num">80</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
-                    <li>
-                        <div class="rank"><span class="number">10</span></div>
-                        <div class="nickName">考上北大</div>
-                        <div class="num">20</div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -127,13 +99,21 @@
     <div class="activity-rules">
       <div class="inner-box">
         <h2 class="title">活动规则</h2>
-        <p class="content">
-            1.活动时间：2019年8月22日-9月5日<br/>
-            2.用户成功邀请1人注册报考大学即可获得100积分奖励，最高可获得10000积分（可免费兑换VIP优惠券及商品）<br/>
-            3.注册成为报考大学用户即可领取30元优惠券，可用于购买VIP，享受全年录取分析与填报指导服务<br/>
-            4.邀请人数排名前3的用户可额外获赠价值¥298的VIP服务<br/>
-            5.本活动最终解释权归报考大学所有<br/>
-        </p>
+        <div class="content-wrap">
+            <p class="content">
+                1.活动时间：2019年8月23日-9月9日<br/>
+                2.用户邀请规则<br/>
+                成功邀请3人    1000积分<br/>
+                成功邀请10人   20元手机话费<br/>
+                成功邀请30人   教师节保温杯礼盒（限量20份)<br/>
+                成功邀请50人   宏途中秋月饼礼盒（价值¥199，限量10份）<br/>
+                3.注册成为报考大学用户即可免费获赠“名校名师高考语文《高频考点微课程》（前4节）”+“测性格找专业”服务<br/>
+                4.邀请人数排名<span class="font_style">前10</span>的用户免费获得价值<span class="font_style">¥2980</span>专家1对1咨询+升学规划服务<br/>
+                5.获得奖励的用户需微信添加<span class="font_style">“报考君”(baokaodaxue)</span>为好友，发送姓名+手机+地址确认领奖，活动结束7日内未兑奖视为放弃。<br/>
+                6.注意：从赢取积分进入的邀请注册不参与本次奖励<br/>
+                7.本次活动最终解释权归报考大学所有<br/>
+            </p>
+        </div>
         <div class="close-btn"></div>
       </div>
     </div>
@@ -141,5 +121,12 @@
     <div class="share-tips">
       <img src="./assets/img/h5_share@2x.png" alt="image">
     </div>
+    <script type="text/javascript" src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+    <script src="./assets/js/dialog/js/dialog.min.js"></script>
+    <script src="./assets/js/vconsole.min.js?t=201904512487"></script>
+    <script src="./assets/js/common.js?t=201904512487"></script>
+    <script src="./assets/js/wx_share.js?t=201904512487"></script>
+    <script src="./assets/js/show.js?t=201904512487"></script>
 </body>
 </html>
