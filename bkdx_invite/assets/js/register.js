@@ -6,6 +6,7 @@ $(function() {
   let $getcode = $('.getcode');
   let $picCode = $('.picCode img');
   let inviterUid = getUrlParam('uid');
+  let fingerStr = '';
 
   if(inviterUid) {
     getInviteName()
@@ -151,7 +152,7 @@ $(function() {
     $.ajax({
       type: 'post',
       url : APIDOMAIN + API.sendPhoneCode,
-      data:{phone:phone, vcode:imgCode, yong:1},
+      data:{phone:phone, vcode:imgCode, yong:1, uid: inviterUid, brw_uiq_str:fingerStr },
       dataType: 'json',
       success: function (res) {
         if(res.code == 200){
@@ -211,4 +212,7 @@ $(function() {
 			}
 		})
   }
+  getDeviceFinger().then(str => {
+    fingerStr = str
+  })
 })

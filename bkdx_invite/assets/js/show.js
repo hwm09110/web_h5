@@ -3,10 +3,6 @@ $(function(){
   let $invite_list_box = $('.invite-list-box'),
       $list_content = $('.list-content');
 
-  //  // 初始化
-  //  var vConsole = new VConsole();
-  //  console.log('VConsole is cool');
-
    //在微信浏览器中，检测是否获得了openid
   checkIsOuath();
   getPageInfo();
@@ -89,6 +85,7 @@ $(function(){
           var info = res.extraData;
           var uid = info.uid;
           var ranking_list = info.ranking_list;
+          var is_end = info.is_end;
 
           $('.invite-count').html(info.count ? info.count: '0');
           $('.prize').html(info.prize ? info.prize: '--');
@@ -96,6 +93,11 @@ $(function(){
           fillInviteList(ranking_list)
           if(isWeiXin()) {
             getWxconfig(uid) //配置微信分享
+          }
+
+          // 活动已结束
+          if(is_end == 1) {
+            toast("活动已经结束，成功邀请后将不计入奖励！", '', 5000)
           }
         }else if(res.code === '9001'){
           toast(res.message)

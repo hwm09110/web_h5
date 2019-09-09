@@ -5,8 +5,8 @@ const PAGEDOMAIN = "";
 const API = {
   'createImgCode': '/passport/captcha/createcode',
   'checkIsRegister': '/passport/register/onephone',
-  'sendPhoneCode': '/passport/captcha/websend',
-  'goRegister': '/passport/register/webdo',
+  'sendPhoneCode': '/bkdx/kxinvactivity/websend',
+  'goRegister': '/bkdx/kxinvactivity/webdo',
   'setInviteSuccess': '/bkdx/kxinvactivity/inviteSuccess',
   'doLgoin': '/passport/denglu/do_app_new',
   'getInviteInfo': '/bkdx/kxinvactivity/inviteIndex',
@@ -184,5 +184,28 @@ function checkIsOuath() {
         reject();
       }
     })
+  })
+}
+
+function getDeviceFinger(){
+  return new Promise((resolve, reject) => {
+    let device_finger_str = ''
+    if (window.requestIdleCallback) {
+        requestIdleCallback(function () {
+            Fingerprint2.get({},function (components) {
+                let values = components.map(function (component) { return component.value })
+                device_finger_str = Fingerprint2.x64hash128(values.join(''), 31)
+                resolve(device_finger_str)
+            })
+        })
+    } else {
+        setTimeout(function () {
+            Fingerprint2.get({},function (components) {
+                let values = components.map(function (component) { return component.value })
+                device_finger_str = Fingerprint2.x64hash128(values.join(''), 31)
+                resolve(device_finger_str)
+            })
+        }, 500)
+    }
   })
 }
