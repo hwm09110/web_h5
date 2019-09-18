@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>分数明细</title>
+  <script src="./assets/js/flexible.js"></script>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/js/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./assets/js/mui/css/mui.picker.min.css">
+  <link rel="stylesheet" href="./assets/css/detail.css?t=201909091432">
+</head>
+<body>
+  <div class="page-container">
+    <header class="header-wrap fixed">
+      <div class="header-box">
+        <div class="inner-box">
+          <div class="left arrow-icon"></div>
+          <div class="middle">
+              <ul class="top-nav">
+                <li data-type="1" class="active"><a href="javascript:;">分数明细</a></li>
+                <li data-type="2"><a href="javascript:;">处理记录</a></li>
+              </ul>
+            </ul>
+          </div>
+          <div class="right more-icon"></div>
+        </div>
+      </div>
+    </header>
+    <section class="base-info">
+      <div class="time">2019年09月01日-2019年09月30日</div>
+      <div class="total-score">累计<span>-2分</span></div>
+    </section>
+    <section class="detail-list">
+      <div class="list-item">
+        <div class="left word">
+          <span class="name">101</span>
+        </div>
+        <div class="right">
+          <div class="middle">
+            <h2>李筱懿<span class="class_name">高一1班</span><span class="room">宿舍101</span></h2>
+            <div class="info">
+              <h3>出勤</h3>
+              <p>未按时离开寝室去上课、上自习</p>
+            </div>
+            <div class="other">
+              <span class="publisher">发布人：王子豪</span>
+              <span class="time">2019-09-30</span>
+            </div>
+          </div>
+          <div class="score">
+            <strong class="reduce">-2</strong>
+            <span>分</span>
+          </div>
+        </div>
+      </div>
+      <div class="list-item">
+          <div class="left"><img src="http://www.33lc.com/article/UploadPic/2012-7/201272513538110.jpg" alt="portrait"></div>
+          <div class="right">
+            <div class="middle">
+              <h2>李筱懿<span class="class_name">高一1班</span><span class="room">宿舍101</span></h2>
+              <div class="info">
+                <h3>出勤</h3>
+                <p>未按时离开寝室去上课、上自习</p>
+              </div>
+              <div class="other">
+                <span class="publisher">发布人：王子豪</span>
+                <span class="time">2019-09-30</span>
+              </div>
+            </div>
+            <div class="score">
+              <strong class="plus">+2</strong>
+              <span>分</span>
+            </div>
+          </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="query-modal-wrap">
+    <div class="query-modal-box">
+      <div class="item-box">
+        <h2 class="title">按时间</h2>
+        <div class="content dateTime">
+          <div class="stime">2019-07-30</div>
+          <div class="line">~</div>
+          <div class="etime">2019-09-30</div>
+        </div>
+        <div class="content timeType">
+          <div class="select-item" data-type="1">近一周</div>
+          <div class="select-item" data-type="2">近一月</div>
+          <div class="select-item" data-type="3">近三月</div>
+        </div>
+      </div>
+      <div class="item-box">
+        <h2 class="title">按处理对象</h2>
+        <div class="content dealObj">
+          <div class="select-item selected" data-type="">全部</div>
+          <div class="select-item" data-type="1">个人</div>
+          <div class="select-item" data-type="2">宿舍</div>
+        </div>
+      </div>
+      <div class="item-box">
+        <h2 class="title">按处理类型</h2>
+        <div class="content dealType">
+          <div class="select-item selected" data-type="">全部</div>
+          <div class="select-item" data-type="1">加分</div>
+          <div class="select-item" data-type="2">扣分</div>
+        </div>
+      </div>
+      <div class="operate">
+        <button class="query-btn">确定</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./assets/js/jquery-3.2.1.min.js"></script>
+  <script src="./assets/js/mui/js/mui.min.js"></script>
+  <script src="./assets/js/mui/js/mui.picker.min.js"></script>
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/modalHelper.js"></script>
+  <script src="./assets/js/scoredetail.js"></script>
+</body>
+</html>

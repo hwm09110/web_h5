@@ -1,0 +1,186 @@
+body{
+    background-color: #fff;
+}
+
+.page-container{
+    width: 100%;
+    #header-wrap{
+      padding: 0 0.32rem;
+      height: 0.86rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left{
+        &.arrow-icon{
+          width: 0.2rem;
+          height: 0.3rem;
+          background-image: url('../img/nav_icon_back.png');
+          background-size: 0.2rem 0.3rem;
+          background-repeat: no-repeat;
+        }
+      }
+      .middle{
+        flex: 1;
+        .top-nav{
+          display: flex;
+          justify-content: center;
+          li{
+            width: 1.44rem;
+            font-size: 0.36rem;
+            font-family:PingFangSC;
+            font-weight:500;
+            line-height:0.5rem;
+            color:#999;
+            position: relative;
+            text-align: center;
+            margin: 0 0.40rem;
+            &.active{
+              color:#333;
+              &::after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: -0.10rem;
+                transform: translateX(-50%);
+                width:0.30rem;
+                height:0.06rem;
+                background:rgba(71,174,254,1);
+                border-radius:0.04rem;
+              }
+            }
+          }
+        }
+      }
+      .right{
+        width: 0.4rem;
+        height: 0.08rem;
+        background-image: url('../img/nav_icon_more.png');
+        background-size: 0.4rem 0.08rem;
+        background-repeat: no-repeat;
+      }
+    }
+    .base-info{
+      display: flex;
+      justify-content: space-between;
+      padding: 0.14rem 0.24rem;
+      background-color: #F2F2F2;
+      font-size:0.24rem;
+      font-family:PingFangSC;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      line-height:0.33rem;
+      .time{}
+      .total-score{
+        color: #666666;
+        span{
+          color: #333;
+          margin-left: 0.2rem;
+        }
+      }
+    }
+    .detail-list{
+      .list-item{
+        padding: 0.44rem 0 0 0.32rem;
+        display: flex;
+        .left{
+          width:1.10rem;
+          height:1.54rem;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+          &.word{
+            background-color: #8A9199;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .name{
+              font-size:0.48rem;
+              font-family:PingFangSC;
+              font-weight:600;
+              color:rgba(255,255,255,1);
+              line-height:0.67rem;
+            }
+          }
+        }
+        .right{
+          display: flex;
+          width: 5.72rem;
+          margin-left: 0.36rem;
+          border-bottom: 1px solid #dcdcdc;
+          padding-bottom: 0.44rem;
+          .middle{
+            width: 4.19rem;
+            h2{
+              font-size:0.40rem;
+              font-family:PingFangSC;
+              font-weight:500;
+              color:rgba(71,174,254,1);
+              line-height:0.56rem;
+              display: flex;
+              align-items: center;
+              .class_name,
+              .room{
+                font-size:0.24rem;
+                font-family:PingFangSC;
+                font-weight:500;
+                color:rgba(102,102,102,1);
+                line-height:0.33rem;
+                margin-left: 0.2rem;
+              }
+            }
+            .info{
+              background-color: #eee;
+              padding: 0.12rem 0.16rem;
+              font-size:0.24rem;
+              font-family:PingFangSC;
+              font-weight:500;
+              line-height:0.33rem;
+              margin-top: 0.14rem;
+              h3{
+                color:#333;
+              }
+              p{
+                margin-top: 0.08rem;
+                color:#666;
+              }
+            }
+            .other{
+              margin-top: 0.12rem;
+              span{
+                font-size:0.20rem;
+                font-family:PingFangSC;
+                font-weight:400;
+                color:rgba(153,153,153,1);
+                line-height:0.28rem;
+                margin-right: 0.28rem;
+              }
+            }
+          }
+          .score{
+            margin-left: 0.34rem;
+            margin-top: 0.48rem;
+            font-family:PingFangSC;
+            font-weight:600;
+            strong{
+              font-size:0.48rem;
+              line-height:0.67rem;
+              &.plus{
+                color: #47AEFE;
+              }
+              &.reduce{
+                color: #FF4545;
+              }
+            }
+            span{
+              font-size:0.24rem;
+              color:#333333;
+              line-height:0.33rem;
+            }
+          }
+        }
+      }
+    }
+    
+}
