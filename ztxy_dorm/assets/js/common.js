@@ -1,4 +1,5 @@
-const APIDOMAIN = "http://192.168.8.90";
+const APIDOMAIN = "http://219.135.147.236:9901";
+// const APIDOMAIN = "http://192.168.8.90";
 const PAGEDOMAIN = "http://192.168.8.90";
 // const APIDOMAIN = "";
 // const PAGEDOMAIN = "";
