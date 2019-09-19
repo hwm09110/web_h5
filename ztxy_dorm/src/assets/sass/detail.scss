@@ -128,7 +128,8 @@ body{
       }
       .right{
         display: flex;
-        width: 5.72rem;
+        // width: 5.72rem;
+        flex: 1;
         margin-left: 0.36rem;
         border-bottom: 1px solid #dcdcdc;
         padding-bottom: 0.44rem;

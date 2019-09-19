@@ -131,15 +131,15 @@ CountDown.prototype = {
   constructor: CountDown,
   start: function() {
     let that = this;
-    that.everyTimeCallBack && that.everyTimeCallBack(that.totalTime)
+    that.everyTimeCallBack && that.everyTimeCallBack(that.totalTime);
     that.timer = setInterval(function() {
       that._time++;
-      that.everyTimeCallBack && that.everyTimeCallBack(that.totalTime - that._time)
+      that.everyTimeCallBack && that.everyTimeCallBack(that.totalTime - that._time);
       if(that.totalTime == that._time) {
-        that.finishCallBack && that.finishCallBack(that.totalTime)
-        clearInterval(that.timer)
+        that.finishCallBack && that.finishCallBack(that.totalTime);
+        clearInterval(that.timer);
       }
-    }, 1000)
+    }, 1000);
   },
   pause: function() {},
   stop: function() {},

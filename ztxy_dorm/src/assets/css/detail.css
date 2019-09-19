@@ -149,7 +149,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 5.72rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-left: 0.36rem;
   border-bottom: 1px solid #dcdcdc;
   padding-bottom: 0.44rem;
