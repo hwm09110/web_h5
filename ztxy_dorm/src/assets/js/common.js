@@ -1,7 +1,7 @@
-const APIDOMAIN = "http://219.135.147.236:9901";
-const PAGEDOMAIN = "http://192.168.8.90";
-// const APIDOMAIN = "";
-// const PAGEDOMAIN = "";
+// const APIDOMAIN = "http://219.135.147.236:9901";
+// const PAGEDOMAIN = "http://192.168.8.90";
+const APIDOMAIN = "";
+const PAGEDOMAIN = "";
 const API = {
   'getDormScoreRecord': '/ydzt/parent_dormscore/getDormScoreRecord',
   'getDormPublicProcess': '/ydzt/parent_dormscore/getDormPublicProcess',

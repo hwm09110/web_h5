@@ -115,6 +115,7 @@ $(function() {
       time_type: "",
       for_type: "",
       action_type: "",
+      handle_type: "",
     };
     var $selectedTimeType = $('.timeType').find('.selected'),
         $stime = $('.dateTime .stime'),
@@ -130,6 +131,7 @@ $(function() {
     }
     query.for_type = $selectedDealObj.data('type');
     query.action_type = $selectedDealType.data('type');
+    query.handle_type = $selectedDealType.data('type');
     
     return query;
   }
