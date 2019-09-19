@@ -2,6 +2,10 @@
 $(function() {
   var stu_guid = getUrlParam('stu_guid');
   var pageType = $('.top-nav li.active').data('type'); //1:分数明细 2：处理记录
+  
+  $('.goback').on('click', function(){
+    navigatorBack();
+  });
 
   // 切换tab
   $('.top-nav').delegate('li', 'click', function(){
@@ -26,6 +30,7 @@ $(function() {
       $stime = $query_modal_box.find('.stime'),
       $etime = $query_modal_box.find('.etime'),
       $query_btn = $query_modal_box.find('.query-btn'),
+      $base_info = $('.base-info'),
       $detail_list = $('.detail-list');
 
 
@@ -142,6 +147,18 @@ $(function() {
     scrollLoadManage.reset();
   });
 
+  // 渲染总分
+  function renderTotalInfo(score, params){
+    var dateRange = "";
+    if(params.time_type){
+      dateRange = getRelativeDate(params.time_type);
+    }else{
+      dateRange = (new Date(params.bdate).Format("yyyy年MM月dd日"))  + '-'+ (new Date(params.edate).Format("yyyy年MM月dd日"));
+    }
+    $base_info.find('.time').html(dateRange);
+    $base_info.find('.score').html(score);
+  }
+
   //渲染数据（分数明细）
   function renderScoreData(datas, curpage) {
     var _html =  '';
@@ -154,8 +171,12 @@ $(function() {
     }else{
       $.each(datas, function(index, item){
           _html +=  `<div class="list-item">
-                      <div class="left">
-                        <img src="http://www.33lc.com/article/UploadPic/2012-7/201272513538110.jpg" alt="portrait">
+                      <div class="left ${item.for_type==2?'word':''}">
+                        ${item.for_type==1?
+                          ('<img src="'+item.stu_head+'" alt="portrait"></img>')
+                          :
+                          ('<span class="name">'+item.room_name+'</span>')
+                        }
                       </div>
                       <div class="right">
                         <div class="middle">
@@ -197,8 +218,12 @@ $(function() {
     }else{
       $.each(datas, function(index, item){
           _html +=  `<div class="list-item">
-                      <div class="left">
-                        <img src="http://www.33lc.com/article/UploadPic/2012-7/201272513538110.jpg" alt="portrait">
+                      <div class="left ${item.for_type==2?'word':''}">
+                        ${item.for_type==1?
+                          ('<img src="'+item.stu_head+'" alt="portrait"></img>')
+                          :
+                          ('<span class="name">'+item.room_name+'</span>')
+                        }
                       </div>
                       <div class="right">
                         <div class="middle">
@@ -242,13 +267,16 @@ $(function() {
     .done(function(res){
       console.log(res)
       if(res.code === '200'){
-        var listData = res.extraData;
         if(pageType == 1) {
+          var listData = res.extraData.info,
+              total_score = res.extraData.total_score;
           renderScoreData(listData, page);
+          renderTotalInfo(total_score, queryParams);
         }else{
+          var listData = res.extraData;
           renderDealData(listData, page)
         }
-        if(res.extraData.length == 0) {
+        if(listData.length == 0) {
           scrollLoadManage.isFinish = true; //告诉插件已经加载完了
         }
       }else{
@@ -263,6 +291,47 @@ $(function() {
       console.log('always')
       scrollLoadManage.isAjax = false;
     })
+  }
+
+  //获取近一周、近一个月、近三个月的日期范围
+  //category : 1 近一周  2近一个月  3近三个月
+  function getRelativeDate(category){
+    var oNowDate = new Date(),
+        nowYear = oNowDate.getFullYear(),
+        nowMonth = oNowDate.getMonth() + 1,
+        nowDate = oNowDate.getDate();
+    
+    var dateRange = "";
+    var startDate = "";
+    var endDate = nowYear + '年' + formatNumber(nowMonth) + '月' + formatNumber(nowDate) + '日';
+
+    var oRelDate = new Date();
+
+    switch(category){
+      case 1:
+        // oRelDate.setTime(oNowDate.getTime() - 7*24*60*60*1000)
+        oRelDate.setDate( oNowDate.getDate() - 7 )
+        break;
+      case 2:
+        oRelDate.setMonth( oNowDate.getMonth() - 1 );
+        break;
+        case 3:
+        oRelDate.setMonth( oNowDate.getMonth() - 3 );
+        break;
+    }
+
+    relYear = oRelDate.getFullYear(),
+    relMonth = oRelDate.getMonth() + 1,
+    relDate = oRelDate.getDate();
+    startDate = relYear + '年' + formatNumber(relMonth) + '月' + formatNumber(relDate) + '日';
+
+    function formatNumber(num) {
+      return num < 10 ? '0'+num : num;
+    }
+
+    dateRange = startDate + '-' + endDate;
+    
+    return dateRange;
   }
 
   //滚动加载更多

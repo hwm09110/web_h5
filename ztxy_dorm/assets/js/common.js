@@ -1,5 +1,4 @@
 const APIDOMAIN = "http://219.135.147.236:9901";
-// const APIDOMAIN = "http://192.168.8.90";
 const PAGEDOMAIN = "http://192.168.8.90";
 // const APIDOMAIN = "";
 // const PAGEDOMAIN = "";
@@ -102,6 +101,20 @@ function toast(content, type, time) {
     infoText: content,
     autoClose : time || 1500
   });
+}
+
+//top goback
+function navigatorBack() {
+  var u = navigator.userAgent;
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+  if(isAndroid){
+    window.js_bkdx.exit();
+  }else if(isiOS){
+    window.webkit.messageHandlers.backActionClick.postMessage(null);
+  }else{
+    window.history.go(-1);
+  }
 }
 
 
