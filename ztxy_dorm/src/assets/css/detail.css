@@ -49,18 +49,18 @@ body {
           justify-content: center;
 }
 .page-container .header-wrap .header-box .inner-box .middle .top-nav li {
-  width: 1.44rem;
-  font-size: 0.36rem;
-  font-family: PingFangSC;
-  font-weight: 500;
-  line-height: 0.5rem;
+  width: 1.55rem;
   position: relative;
   text-align: center;
   margin: 0 0.40rem;
 }
 .page-container .header-wrap .header-box .inner-box .middle .top-nav li a {
   display: block;
+  line-height: 0.5rem;
   color: #999;
+  font-family: PingFangSC;
+  font-size: 0.36rem;
+  font-weight: 500;
   text-decoration: none;
 }
 .page-container .header-wrap .header-box .inner-box .middle .top-nav li.active a {
