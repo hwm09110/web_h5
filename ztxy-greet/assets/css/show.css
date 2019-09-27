@@ -1,0 +1,85 @@
+/*立即绑定介绍*/
+body{
+	width: 100%;
+	background-color: #47AEFE;
+	background-image: url('../img/h5_bg.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	/*overflow: hidden;*/
+}
+
+
+.main{
+	margin-top: 3.72rem;
+}
+.banner{
+	width: 100%;
+	height: 1.06rem;
+	background-image: url('../img/h5_brand@2x(1).png');
+	background-size: 100% 1.06rem;
+}
+
+.main .intr-box{
+	background-color: #fff;
+	margin: 0 0.4rem;
+	box-shadow:0px 0.10rem 0.10rem 0px rgba(43,154,255,1);
+	border-radius:0.10rem;
+	padding: 0.4rem 0;
+}
+.intr-box .item{
+	margin-bottom: 0.3rem;
+}
+.intr-box .item:last-child{
+	margin-bottom: 0;
+}
+.intr-box .item h2{
+	width: 2.10rem;
+	height: 0.5rem;
+	margin-bottom: 0.2rem;
+	background-size: 2.10rem 0.5rem;
+	background-repeat: no-repeat;
+}
+.intr-box .item .xytz{
+	background-image: url('../img/experience_1@2x(1).png');
+}
+.intr-box .item .jxtz{
+	background-image: url('../img/experience_2@2x(1).png');
+}
+.intr-box .item .open{
+	background-image: url('../img/experience_3@2x(1).png');
+}
+.intr-box .item p{
+	padding: 0 0.51rem 0 0.47rem;
+	font-size:0.28rem;
+	font-family:PingFangSC-Regular,PingFangSC;
+	font-weight:400;
+	color:rgba(102,102,102,1);
+	line-height:0.50rem;
+}
+
+.open-btn{
+	display: block;
+	width: calc(100% - 0.8rem);
+	margin: 0.32rem 0.4rem;
+	height: 0.98rem;
+	background-image: url('../img/buttton@2x.png');
+	background-size: 100% 0.98rem;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+
+
+/*适配iphoneX*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+	body{
+		background-image: url('../img/h5_bg_iphonex.png');
+	}
+	.main{
+		margin-top: 5.56rem;
+	}
+	.open-btn{
+		margin-top: 1rem;
+	}
+}
