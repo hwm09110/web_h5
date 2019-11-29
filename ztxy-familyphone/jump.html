@@ -26,6 +26,7 @@
 		<script src="./assets/js/evokeApp.js?v=1.0.1"></script>
 		<script>
 		window.onload = function() {
+			const browser = browserInfo();
 			const oCallBtn = document.querySelector('.call-btn');
 			const appDownloadUrl = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.htjy.campus.parents&channel=0002160650432d595942&fromcase=60001'; //应用宝地址
 			let appurl = getUrlParam('appurl');
