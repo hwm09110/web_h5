@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>亲情电话</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" >
+  <link rel="stylesheet" type="text/css" href="./assets/css/jump.css" >
+  <script src="./assets/js/flexible.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<h1 class="title">您孩子的亲情电话</h1>
+		<div class="main-info">
+			<div class="app-logo"><img src="./assets/img/ztxy_logo@2x.png" alt="logo"></div>
+			<div class="app-name">掌通校园-家长版</div>
+			<div class="notice-content">尊敬的家长，您接到了一通亲情电话，请
+				立即打开掌通校园APP进行接听</div>
+			</div>
+			<div class="bottom">
+				<button class="call-btn"></button>
+				<p class="tips">打开掌通校园APP接听电话</p>
+			</div>
+		</div>
+		<script src="./assets/js/evokeApp.js?v=1.0.1"></script>
+		<script>
+		window.onload = function() {
+			const oCallBtn = document.querySelector('.call-btn');
+			const appDownloadUrl = 'https://a.app.qq.com/o/simple.jsp?pkgname=com.htjy.campus.parents&channel=0002160650432d595942&fromcase=60001'; //应用宝地址
+			let appurl = getUrlParam('appurl');
+			appurl = decodeURIComponent(appurl);
+
+			oCallBtn.onclick = function() {
+				openApp(appurl, appDownloadUrl)
+			}
+		}
+
+		//获取url参数
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+			var r = window.location.search.substr(1).match(reg);
+			if(r != null) return decodeURIComponent(r[2]);
+			return null;
+		}
+		</script>
+	</body>
+</html>
